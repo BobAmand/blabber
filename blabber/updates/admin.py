@@ -4,7 +4,10 @@ from .models import Status, Favorite
 
 # Register your models here.
 class StatusAdmin(admin.ModelAdmin):
-    list_display = ['user', 'test', 'posted_at']
+    list_display = ['user', 'test', 'posted_at','favorite_set']
+
+class FavoriteAdmin(admin.ModelAdmin):
+    list_display = ['user', 'status']
 
 
 admin.site.register(Status, StatusAdmin)
